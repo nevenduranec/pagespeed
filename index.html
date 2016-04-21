@@ -43,49 +43,165 @@
 				<section>
 					<h1 style="font-size: 3em">Page speed optimization</h1>
 					<h3>Rendering the critical path</h3>
-					<!-- <p>
-						<small>Example on <a href="http://lino.eu">lino.eu</a></small>
-					</p> -->
-
-					<aside class="notes">
-				        Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-				    </aside>
 				</section>
 
 				<section>
-					<h2>The why</h2>
+					<section>
+						<p>Web performance in one slide...</p>
+						<img src="/images/start.png" />
+					</section>
+					<section><h1>Thanks. Questions?</h1></section>
 				</section>
 
 				<section>
-					<p style="font-size: 30px;">Smartphones dominate retail traffic, doubling in one year. [1]</p>
-					<img src="/images/mobileVSdesktop.png" />
+
+					<section><h2>The why</h2></section>
+
+					<section>
+						<p style="font-size: 30px;">Smartphones dominate retail traffic, doubling in one year. [1]</p>
+						<img src="/images/mobileVSdesktop.png" />
+					</section>
+
+					<section>
+						<p>25% of customers leave within 4 seconds, &gt; 50% after 8 seconds if waiting [2]</p>
+						<img src="/images/bounceRate.png" />
+					</section>
+
+					<section>
+						<p>One second faster = 27% increase in conversions [2]</p>
+						<img src="/images/conversions.png" />
+					</section>
+
+					<section>
+						<p>Website response time [3]</p>
+						<img src="/images/responseTime.jpg" />
+					</section>
+
+					<section>
+						<h3>Bandwidth<br />+ <br />Latency <br />≈ <br />Performance</h3>
+					</section>
+
+					<section>
+						<p>Components of an HTTP request</p>
+						<img src="/images/http.png" />
+					</section>
+
+					<section>
+						<p>Latency</p>
+						<img src="/images/latency.png" />
+					</section>
+
+					<section>
+						<p>Wire latency</p>
+						<img src="/images/latency-wire.png" />
+					</section>
+
+					<section>
+						<p>Wireless latency</p>
+						<img src="/images/latency-wireless.png" />
+					</section>
+
+					<section>
+						<p>More Bandwidth Doesn’t Matter (Much)</p>
+						<img src="/images/latencyVSbandwidth.png" />
+					</section>
+
 				</section>
 
 				<section>
-					<p>25% of customers leave within 4 seconds, > 50% after 8 seconds if waiting [2]</p>
-					<img src="/images/bounceRate.png" />
+
+					<section>
+						<h2>The critical rendering path</h2>
+						<img src="/images/crp.png" />
+					</section>
+
+					<section>
+						<p>Let's try a simple example...</p>
+						<img src="/images/crp1.png" />
+					</section>
+
+					<section>
+						<p>HTML bytes are arriving on the wire...</p>
+						<img src="/images/crp2.png" />
+					</section>
+
+					<section>
+						<p>The HTML5 parser at work...</p>
+						<img src="/images/crp3.png" />
+					</section>
+
+					<section>
+						<p>DOM construction is complete... waiting on CSS!</p>
+						<img src="/images/crp4.png" />
+					</section>
+
+					<section>
+						<p>First CSS bytes arrive... still waiting on CSS!</p>
+						<img src="/images/crp5.png" />
+					</section>
+
+					<section>
+						<p>Finally, we can construct the CSSOM!</p>
+						<img src="/images/crp6.png" />
+					</section>
+
+					<section>
+						<p>DOM + CSSOM = Render Tree(s)</p>
+						<img src="/images/crp7.png" />
+					</section>
+
+					<section>
+						<p>DOM + CSSOM = Render Tree(s)</p>
+						<img src="/images/crp8.png" />
+					</section>
+
+					<section>
+						<p>Layout &amp; paint</p>
+						<img src="/images/crp9.png" />
+					</section>
+
+					<section>
+						<p>Err, wait. Did we forget something?</p>
+					</section>
+
+					<section>
+						<p>JavaScript... our friend and foe.</p>
+						<img src="/images/crp10.png" />
+					</section>
+
 				</section>
 
 				<section>
-					<p>One second faster = 27% increase in conversions [2]</p>
-					<img src="/images/conversions.png" />
+
+					<section><h2>The how</h2></section>
+
+					<section>
+						<ol>
+							<li>Eliminate render-blocking JavaScript</li>
+						</ol>
+					</section>
+
+					<section>
+						<p>Load all JavaScript asynchronously</p>
+						<img src="/images/js-sync.png" />
+					</section>
+
+					<section>
+						<p>Load all JavaScript asynchronously</p>
+						<img src="/images/js-async.png" />
+					</section>
+
 				</section>
 
-				<section>
-					<p>Website response time [3]</p>
-					<img src="/images/responseTime.jpg" />
-				</section>
 
 				<section>
-					<h3>Bandwidth<br />+ <br />Latency <br />≈ <br />Performance</h3>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
 
-				<section>
-					<video data-autoplay src="images/slow.mp4" style="display: inline; width: 460px;" controls></video>
-					<video data-autoplay src="images/fast.mp4" style="display: inline-block; width: 460px;" controls></video>
+					<section><h2>The results</h2></section>
+
+					<section>
+						<video data-autoplay src="images/slow.mp4" style="display: inline; width: 460px;" controls></video>
+						<video data-autoplay src="images/fast.mp4" style="display: inline-block; width: 460px;" controls></video>
+					</section>
 				</section>
 
 
