@@ -161,7 +161,7 @@
 					</section>
 
 					<section>
-						<p>Err, wait. Did we forget something?</p>
+						<h3>Err, wait. Did we forget something?</h3>
 					</section>
 
 					<section>
@@ -176,19 +176,62 @@
 					<section><h2>The how</h2></section>
 
 					<section>
-						<ol>
-							<li>Eliminate render-blocking JavaScript</li>
-						</ol>
+						<h3>1. Eliminate JavaScript from the critical rendering path</h3>
 					</section>
 
 					<section>
-						<p>Load all JavaScript asynchronously</p>
+						<h3>Synchronous</h3>
 						<img src="/images/js-sync.png" />
 					</section>
 
 					<section>
-						<p>Load all JavaScript asynchronously</p>
+						<h3>Asynchronous</h3>
 						<img src="/images/js-async.png" />
+					</section>
+
+					<section>
+						<h3>2. Inline just the required resources for above the fold</h3>
+					</section>
+
+					<section>
+						<h3>What’s in your critical CSS?</h3>
+						<img src="/images/criticalCSS.png" />
+					</section>
+
+					<section>
+						<h3>Before</h3>
+						<img src="/images/html1.png" />
+					</section>
+
+					<section>
+						<h3>After</h3>
+						<img src="/images/html2.png" />
+					</section>
+
+					<section>
+						<h3>3. Load images (everything) on demand</h3>
+					</section>
+
+					<section>
+						<img src="/images/lazyLoading.png" />
+					</section>
+
+					<section>
+						<h3>4. Dynamically load the appropriate image source based on image size in layout and/or screen density (DPI)</h3>
+					</section>
+
+					<section>
+						<img src="/images/rwdImages.png" />
+					</section>
+
+					<section>
+						<h3>5. Server setup</h3>
+						<ul>
+							<li class="fragment">Gzip</li>
+							<li class="fragment">Keep alive - reuse tcp connection</li>
+							<li class="fragment">Expire headers - cache</li>
+							<li class="fragment">CDN (Content delivery network)</li>
+						</ul>
 					</section>
 
 				</section>
